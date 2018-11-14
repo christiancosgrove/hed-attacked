@@ -78,5 +78,4 @@ class ImageLabelmapDataLayer(caffe.Layer):
     """
     Data layer doesn't need back propagate
     """
-    bottom[0].diff = top[0].diff
     pass

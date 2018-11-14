@@ -7,3 +7,8 @@ data/
 *.prototxt
 *.log
 .ipynb_checkpoints/
+output*
+imagenet_attacked*
+pascal_attacked*
+imagenet-hed-outputs
+pascal-hed-outputs
