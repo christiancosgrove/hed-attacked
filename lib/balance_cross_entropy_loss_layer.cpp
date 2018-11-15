@@ -102,8 +102,8 @@ void BalanceCrossEntropyLossLayer<Dtype>::Forward_cpu(
       LOG(FATAL)<<"Unknown target value: " << target[i];
     }
   }
-  loss += loss_pos * count_[0] / (count_[0]+count_[1]);
-  loss += loss_neg * count_[1] / (count_[0]+count_[1]);
+  // loss += loss_pos * count_[0] / (count_[0]+count_[1]);
+  // loss += loss_neg * count_[1] / (count_[0]+count_[1]);
   normalizer_ = get_normalizer(normalization_, count_[0]+count_[1]);
   top[0]->mutable_cpu_data()[0] = loss / normalizer_;
 }
@@ -129,9 +129,9 @@ void BalanceCrossEntropyLossLayer<Dtype>::Backward_cpu(
         bottom_diff[i] = 0; continue;
       }
       if (target[i] == 0) {
-        bottom_diff[i] *=  count_[1] / (count_[0]+count_[1]);
+        // bottom_diff[i] *=  count_[1] / (count_[0]+count_[1]);
       } else if (target[i] == 1) {
-        bottom_diff[i] *=  count_[0] / (count_[0]+count_[1]);
+        // bottom_diff[i] *=  count_[0] / (count_[0]+count_[1]);
       } else {
         LOG(FATAL)<<"Unknown target value: "<<target[i];
       }
