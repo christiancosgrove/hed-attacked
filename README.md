@@ -1,5 +1,5 @@
 # Adversarial Examples for Edge Detection: They Exist, and They Transfer
-Official implementation of [https://arxiv.org/abs/1906.00335](https://arxiv.org/abs/1906.00335) by Christian Cosgrove and Alan Yuille, *WACV 2020*
+Official implementation of [Adversarial Examples for Edge Detection: They Exist, and They Transfer](https://arxiv.org/abs/1906.00335) by Christian Cosgrove and Alan Yuille, *WACV 2020*
 
 ```
 @article{Cosgrove2020AdversarialEF,
